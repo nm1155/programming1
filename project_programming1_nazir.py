@@ -61,11 +61,10 @@ probs = lr.predict_proba([person])
 # Output prediction
 st.subheader("Prediction")
 if predicted_class == 1:
-    st.success("This person is predicted to be a LinkedIn user.")
+    st.success("This person is a LinkedIn user.")
 else:
-    st.error("This person is predicted to NOT be a LinkedIn user.")
+    st.error("This person is not a LinkedIn user.")
 
 # Display probabilities
-st.subheader("Prediction Probabilities")
+st.subheader("Prediction Probability")
 st.write(f"Probability of being a LinkedIn user: {probs[0][1]:.2f}")
-st.write(f"Probability of NOT being a LinkedIn user: {probs[0][0]:.2f}")
